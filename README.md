@@ -2,6 +2,8 @@
 
 > Functional alternatives to many native JavaScript methods and then some
 
+Bundstreg is a set of utility functions designed to replace many native JavaScript methods with often faster alternatives in the same vein as [Underscore](http://underscorejs.org/), [Lodash](https://lodash.com/), and the likes. The thing that Bundstreg does differently from these libraries is its focus on minimalism and speed. Functions found in Bundstreg are rarely generic and make quite a few assumptions about the data that you pass them. It in doubt then you probably want to use another library.
+
 ## Contents
 
 -   [Installation](#installation)
