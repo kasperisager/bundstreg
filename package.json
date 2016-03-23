@@ -1,0 +1,51 @@
+{
+  "name": "bundstreg",
+  "version": "0.0.0",
+  "description": "Functional alternatives to many native JavaScript methods and then some",
+  "license": "MIT",
+  "repository": "kasperisager/bundstreg",
+  "author": "Kasper Kronborg Isager <kasperisager@gmail.com>",
+  "scripts": {
+    "test": "xo && nyc ava",
+    "transpile": "babel lib -d dist",
+    "prepublish": "npm run transpile"
+  },
+  "main": "dist/index.js",
+  "jsnext:main": "lib/index.js",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "keywords": [
+    "functional",
+    "native",
+    "utility",
+    "es6",
+    "modern",
+    "browser"
+  ],
+  "devDependencies": {
+    "ava": "^0.13.0",
+    "babel-cli": "^6.6.5",
+    "nyc": "^6.1.1",
+    "xo": "^0.13.0"
+  },
+  "ava": {
+    "verbose": true,
+    "require": [
+      "babel-core/register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "xo": {
+    "space": true,
+    "exnext": true,
+    "rules": {
+      "no-self-compare": 0
+    }
+  }
+}
