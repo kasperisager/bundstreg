@@ -7,6 +7,8 @@
   "author": "Kasper Kronborg Isager <kasperisager@gmail.com>",
   "scripts": {
     "test": "xo && nyc ava",
+    "coverage": "nyc report --reporter=html",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "transpile": "babel lib -d dist",
     "prepublish": "npm run transpile"
   },
@@ -27,6 +29,7 @@
   "devDependencies": {
     "ava": "^0.13.0",
     "babel-cli": "^6.6.5",
+    "coveralls": "^2.11.8",
     "nyc": "^6.1.1",
     "xo": "^0.13.0"
   },
