@@ -110,27 +110,6 @@ every(a, (e, i) => e % 2 === 0);
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the predicate returns truthy for all elements of the array, otherwise `false`.
 
-### every
-
-Check if a predicate returns truthy for any element of an array.
-
-> _Note:_ Iteration stop as soon as an element is found for which the predicate returns truthy.
-
-**Parameters**
-
--   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to check.
--   `predicate` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** The predicate to invoke on each element.
-
-**Examples**
-
-```javascript
-const a = [1, 2, 3];
-some(a, (e, i) => e % 2 === 0);
-// => true
-```
-
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the predicate returns truthy for any element of the array, otherwise `false`.
-
 ### filter
 
 Filter an array by only keeping elements for which a predicate returns truthy.
@@ -273,6 +252,27 @@ Returns **Any** The accumulated value.
 -   `replacement` **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)\|[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function))** 
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+### some
+
+Check if a predicate returns truthy for any element of an array.
+
+> _Note:_ Iteration stop as soon as an element is found for which the predicate returns truthy.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to check.
+-   `predicate` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** The predicate to invoke on each element.
+
+**Examples**
+
+```javascript
+const a = [1, 2, 3];
+some(a, (e, i) => e % 2 === 0);
+// => true
+```
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the predicate returns truthy for any element of the array, otherwise `false`.
 
 ### split
 
