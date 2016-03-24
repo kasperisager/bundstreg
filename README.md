@@ -91,6 +91,14 @@ Check if a string ends with a specific substring.
 -   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
 -   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The position at which to stop looking. (optional, default `string.length`)
 
+**Examples**
+
+```javascript
+const s = 'Hello World';
+endsWith(s, 'rld');
+// => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the string ends with the substring, otherwise `false`.
 
 ### entries
@@ -351,6 +359,14 @@ Check if a string starts with a specific substring.
 -   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to check.
 -   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
 -   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The position at which to start looking. (optional, default `0`)
+
+**Examples**
+
+```javascript
+const s = 'Hello World';
+startsWith(s, 'Hel');
+// => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the string starts with the substring, otherwise `false`.
 
