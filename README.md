@@ -279,8 +279,8 @@ Returns **Any** The accumulated value.
 
 Replace occurences of a pattern in a string with a replacement.
 
-**Note:** If a string is used as pattern then only the first occurence of the string will be replaced. To perform a
-global replacement use a regular expression with the `g` flag.
+> **Note:** If a string is used as pattern then only the first occurence of the string will be replaced. To perform a
+> global replacement use a regular expression with the `g` flag.
 
 **Parameters**
 
@@ -323,8 +323,8 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 Split a string into an array of substrings.
 
-**Note:** If no separator is provided then the returned array will contain a single substring consisting of the
-entire original string. If the separator is the empty string then the string will be split on every character.
+> **Note:** If no separator is provided then the returned array will contain a single substring consisting of the
+> entire original string. If the separator is the empty string then the string will be split on every character.
 
 **Parameters**
 
