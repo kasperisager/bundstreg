@@ -93,7 +93,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 Check if a predicate returns truthy for all elements of an array.
 
-> _Note:_ Iteration stop as soon as an element is found for which the predicate returns falsy.
+> **Note:** Iteration stops as soon as an element is found for which the predicate returns falsy.
 
 **Parameters**
 
@@ -257,7 +257,7 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 Check if a predicate returns truthy for any element of an array.
 
-> _Note:_ Iteration stop as soon as an element is found for which the predicate returns truthy.
+> **Note:** Iteration stops as soon as an element is found for which the predicate returns truthy.
 
 **Parameters**
 
