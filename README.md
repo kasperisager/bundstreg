@@ -22,7 +22,12 @@ $ npm install --save bundstreg
 ## Usage
 
 ```js
+import {values, join, replace} from 'bundstreg';
 
+const o = {hello: 'Hello', world: 'World'};
+
+replace(join(values(o), ' '), 'Hello', 'Hey');
+// => 'Hey World'
 ```
 
 ## API
@@ -202,10 +207,10 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 **Parameters**
 
--   `x` **Any** 
--   `y` **Any** 
+-   `x` **Any**
+-   `y` **Any**
 
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**
 
 ### join
 
