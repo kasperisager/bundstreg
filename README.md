@@ -97,7 +97,7 @@ entries(o);
 // => [['foo', 1], ['bar', 2]]
 ```
 
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The entries of the object.
 
 ### every
 
