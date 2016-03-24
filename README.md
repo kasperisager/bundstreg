@@ -83,9 +83,19 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ### entries
 
+Get the entries of an object as an array of `[key, value]` pairs.
+
 **Parameters**
 
--   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object whose entries to get.
+
+**Examples**
+
+```javascript
+const o = {foo: 1, bar: 2};
+entries(o);
+// => [['foo', 1], ['bar', 2]]
+```
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
 
@@ -198,11 +208,21 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ### keys
 
+Get the keys of an object as an array.
+
 **Parameters**
 
--   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object whose keys to get.
 
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
+**Examples**
+
+```javascript
+const o = {foo: 1, bar: 2};
+keys(o);
+// => ['foo', 'bar']
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The keys of the object.
 
 ### map
 
@@ -225,7 +245,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### reduce
 
-Reduce an array to value accumulated by invoking an iteratee on each element of the array.
+Reduce an array to a value accumulated by invoking an iteratee on each element of the array.
 
 **Parameters**
 
@@ -320,11 +340,21 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ### values
 
+Get the values of an object as an array.
+
 **Parameters**
 
--   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object whose values to get.
 
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
+**Examples**
+
+```javascript
+const o = {foo: 1, bar: 2};
+keys(o);
+// => [1, 2]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The values of the object.
 
 ## License
 
