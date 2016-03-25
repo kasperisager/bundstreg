@@ -30,6 +30,8 @@ replace(join(values(o), ' '), 'Hello', 'Hey');
 // => 'Hey World'
 ```
 
+Functions in Bundstreg try to be as forgiving as possible and won't blow up in your face as long as you pass them correctly typed data. You should also keep in mind that all methods which let you invoke an iteratee on the elements of an array will loop over the original array so take care not to change the size of the array while iterating.
+
 ## API
 
 ### concat
