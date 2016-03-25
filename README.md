@@ -205,12 +205,32 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ### is
 
+Check if two values are the same. This is neither the same as the `==` operator nor the `===` operator as `is()`
+treats `+0` and `-0` as being not equal and `NaN` as being equal to itself.
+
 **Parameters**
 
--   `x` **Any**
--   `y` **Any**
+-   `x` **Any** The first value.
+-   `y` **Any** The second value.
 
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**
+**Examples**
+
+```javascript
+// These are all true:
+is(173, 173);
+is('foo', 'foo');
+is(0, 0);
+is(NaN, NaN);
+is(null, null);
+
+// These are all false:
+is('foo', 'bar');
+is(0, -0);
+is({}, {});
+is([], []);
+```
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the values are the same, otherwise `false`.
 
 ### join
 
