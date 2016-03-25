@@ -1,3 +1,12 @@
 import test from 'ava';
+import toUpper from '../../lib/string/to-upper';
 
-test.todo('toUpper() uppercases a string');
+test('toUpper() uppercases a string', async t => {
+  const fixtures = [
+    ['foO', 'FOO']
+  ];
+
+  for (const [s, r] of fixtures) {
+    t.is(toUpper(s), r);
+  }
+});
