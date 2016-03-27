@@ -21,6 +21,8 @@ $ npm install --save bundstreg
 
 ## Usage
 
+[<img src=https://tonicdev.com/favicon.ico width=25> Try out Bundstreg in your browser](https://tonicdev.com/npm/bundstreg)
+
 ```js
 import {values, join, replace} from 'bundstreg';
 
