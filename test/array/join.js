@@ -8,3 +8,7 @@ test('join() joins the elements of an array to a string using a separator', asyn
   t.is(join(a, ''), 'foobar42');
   t.is(join(a, ', '), 'foo, bar, 42');
 });
+
+test('join() returns an empty string if no array is given', async t => {
+  t.is(join(), '');
+});

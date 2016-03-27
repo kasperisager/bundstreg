@@ -8,3 +8,11 @@ test('reduce() folds over an array', async t => {
   t.is(reduce(a, s), 10);
   t.is(reduce(a, s, 5), 15);
 });
+
+test('reduce() does nothing if no array is given', async t => {
+  t.is(reduce(), undefined);
+});
+
+test('reduce() does nothing if no iteratee is given', async t => {
+  t.is(reduce([1, 2, 3]), undefined);
+});

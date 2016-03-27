@@ -10,3 +10,7 @@ test('toLower() lowercases a string', async t => {
     t.is(toLower(s), r);
   }
 });
+
+test('toLower() returns an empty string if given no string', async t => {
+  t.is(toLower(), '');
+});

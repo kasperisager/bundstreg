@@ -7,3 +7,7 @@ test('values() returns the values of an object', async t => {
 
   t.same(v, [1, 2, 3]);
 });
+
+test('values() returns an empty array if no object is given', async t => {
+  t.same(values(), []);
+});

@@ -12,3 +12,15 @@ test('endsWith() checks if a string ends with a given query string', async t => 
     t.is(endsWith(s, q, p), r);
   }
 });
+
+test('endsWith() returns false if no string is given', async t => {
+  t.false(endsWith());
+});
+
+test('endsWith() returns false if no query string is given', async t => {
+  t.false(endsWith('foo'));
+});
+
+test('endsWith() returns false if given a query string longer than the string', async t => {
+  t.false(endsWith('foo', 'fooo'));
+});

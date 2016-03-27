@@ -11,3 +11,11 @@ test('every() checks whether all items of an array match a predicate', async t =
   t.true(every(b, e));
   t.false(every(c, e));
 });
+
+test('every() returns true if no array is given', async t => {
+  t.true(every());
+});
+
+test('every() returns true if no predicate is given', async t => {
+  t.true(every([1, 2, 3]));
+});

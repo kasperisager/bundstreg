@@ -7,3 +7,7 @@ test('keys() returns the keys of an object', async t => {
 
   t.same(k, ['foo', 'bar', 'baz']);
 });
+
+test('keys() returns an empty array if no object is given', async t => {
+  t.same(keys(), []);
+});

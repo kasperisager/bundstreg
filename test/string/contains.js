@@ -12,3 +12,11 @@ test('contains() checks if a string contains a query string', async t => {
     t.is(contains(s, q, p), r);
   }
 });
+
+test('contains() returns false if no string is given', async t => {
+  t.false(contains());
+});
+
+test('contains() returns false if no query string is given', async t => {
+  t.false(contains('foo'));
+});

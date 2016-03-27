@@ -10,3 +10,7 @@ test('trim() trims trailing whitespace from a string', async t => {
     t.is(trim(s), r);
   }
 });
+
+test('trim() returns an empty string if given no string', async t => {
+  t.is(trim(), '');
+});

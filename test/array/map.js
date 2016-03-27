@@ -7,3 +7,11 @@ test('map() maps over an array', async t => {
 
   t.same(c, [1, 3, 5]);
 });
+
+test('map() returns an empty array if no array is given', async t => {
+  t.same(map(), []);
+});
+
+test('map() returns the unmodified array if no iteratee is given', async t => {
+  t.same(map([1, 2, 3]), [1, 2, 3]);
+});

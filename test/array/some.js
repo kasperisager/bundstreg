@@ -11,3 +11,11 @@ test('some() checks whether any item of an array matches a predicate', async t =
   t.true(some(b, e));
   t.true(some(c, e));
 });
+
+test('some() returns true if no array is given', async t => {
+  t.true(some());
+});
+
+test('some() returns true if no predicate is given', async t => {
+  t.true(some([1, 2, 3]));
+});

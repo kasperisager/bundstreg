@@ -10,3 +10,7 @@ test('toUpper() uppercases a string', async t => {
     t.is(toUpper(s), r);
   }
 });
+
+test('toUpper() returns an empty string if given no string', async t => {
+  t.is(toUpper(), '');
+});

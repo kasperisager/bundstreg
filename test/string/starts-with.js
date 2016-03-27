@@ -12,3 +12,15 @@ test('startsWith() checks if a string starts with a given query string', async t
     t.is(startsWith(s, q, p), r);
   }
 });
+
+test('startsWith() returns false if no string is given', async t => {
+  t.false(startsWith());
+});
+
+test('startsWith() returns false if no query string is given', async t => {
+  t.false(startsWith('foo'));
+});
+
+test('startsWith() returns false if given a query string longer than the string', async t => {
+  t.false(startsWith('foo', 'fooo'));
+});
