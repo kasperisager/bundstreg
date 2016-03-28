@@ -356,6 +356,29 @@ some(a, (e, i) => e % 2 === 0);
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the predicate returns truthy for any element of the array, otherwise `false`.
 
+### sort
+
+Sort the elements of an array using an iterative quicksort implementation with a cut-off to insertion sort for small
+partitions.
+
+> **Note:** Unlike the native `Array#sort()` sorting will happen on a copy of the array which therefore won't be
+> modified.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to sort.
+-   `comparator` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)=** The comparator function to use.
+
+**Examples**
+
+```javascript
+const a = [3, 1, 2, 7, 6, 4, 5, 10, 8, 9];
+sort(a);
+// => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The sorted array.
+
 ### split
 
 Split a string into an array of substrings.
