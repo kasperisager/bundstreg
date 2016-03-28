@@ -1,21 +1,57 @@
 import test from 'ava';
+import concat from '../../lib/array/concat';
 import sort from '../../lib/array/sort';
 
-function fixtures(d, type) {
-  const {floor, random} = Math;
+function random(d, type) {
   const f = [];
 
-  for (let i = 1; i <= 100; i++) {
+  for (let i = 1; i <= d; i++) {
     const a = [];
 
     for (let j = 0; j < i; j++) {
-      a[j] = type(floor(random() * i));
+      a[j] = type(Math.floor(Math.random() * i));
     }
 
     f[i - 1] = a;
   }
 
   return f;
+}
+
+function sorted(d, type) {
+  const f = [];
+
+  for (let i = 1; i <= d; i++) {
+    const a = [];
+
+    for (let j = 0; j < i; j++) {
+      a[j] = type(j + 1);
+    }
+
+    f[i - 1] = a;
+  }
+
+  return f;
+}
+
+function reversed(d, type) {
+  const f = [];
+
+  for (let i = 1; i <= d; i++) {
+    const a = [];
+
+    for (let j = 0; j < i; j++) {
+      a[j] = type(i - j);
+    }
+
+    f[i - 1] = a;
+  }
+
+  return f;
+}
+
+function fixtures(d, type) {
+  return concat(random(d, type), sorted(d, type), reversed(d, type));
 }
 
 test('sort() sorts an array of numbers', async t => {
