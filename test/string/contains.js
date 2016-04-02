@@ -5,6 +5,7 @@ test('contains() checks if a string contains a query string', async t => {
   const fixtures = [
     [['foo', 'oo'], true],
     [['foo', 'oo', 1], true],
+    [['foo', 'oo', -1], true],
     [['foo', 'oo', 2], false]
   ];
 
