@@ -368,8 +368,7 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ### sort
 
-Sort the elements of an array using an iterative quicksort implementation with a cut-off to insertion sort for small
-partitions.
+Sort the elements of an array.
 
 > **Note:** Unlike the native `Array#sort()` sorting will happen on a copy of the array which therefore won't be
 > modified.
