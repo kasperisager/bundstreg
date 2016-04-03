@@ -3,6 +3,9 @@ import trim from '../../lib/string/trim';
 
 test('trim() trims trailing whitespace from a string', async t => {
   const fixtures = [
+    ['foo', 'foo'],
+    [' foo ', 'foo'],
+    [' foo bar ', 'foo bar'],
     ['  \t   foo   \t', 'foo']
   ];
 
