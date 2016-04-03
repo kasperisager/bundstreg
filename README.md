@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/kasperisager/bundstreg.svg?branch=master)](https://travis-ci.org/kasperisager/bundstreg) [![Coverage Status](https://coveralls.io/repos/github/kasperisager/bundstreg/badge.svg?branch=master)](https://coveralls.io/github/kasperisager/bundstreg?branch=master) [![Inline docs](http://inch-ci.org/github/kasperisager/bundstreg.svg?branch=master)](http://inch-ci.org/github/kasperisager/bundstreg)
 
-Bundstreg is a set of utility functions designed to replace many native JavaScript methods with often faster alternatives in the same vein as [Underscore](http://underscorejs.org/), [Lodash](https://lodash.com/), and the likes. The thing that Bundstreg does differently from these libraries is its focus on minimalism and speed. Functions found in Bundstreg are not generic and make a few basic assumptions about the data that you pass them. If in doubt then you probably want to use another library.
+Bundstreg is a set of utility functions designed to replace many native JavaScript methods with often faster alternatives in the same vein as [Underscore](http://underscorejs.org/), [Lodash](https://lodash.com/), and the likes. The thing that Bundstreg does differently from these libraries is its focus on minimalism and speed.
 
 ## Contents
 
@@ -32,8 +32,6 @@ const o = {hello: 'Hello', world: 'World'};
 replace(join(values(o), ' '), 'Hello', 'Hey');
 // => 'Hey World'
 ```
-
-Functions in Bundstreg try to be as forgiving as possible and won't blow up in your face as long as you pass them correctly typed data. You should also keep in mind that all methods which let you invoke an iteratee on the elements of an array will loop over the original array so take care not to change the size of the array while iterating.
 
 ## Benchmark
 
