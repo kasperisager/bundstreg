@@ -10,6 +10,7 @@ Bundstreg is a set of utility functions designed to replace many native JavaScri
 
 -   [Installation](#installation)
 -   [Usage](#usage)
+-   [Benchmark](#benchmark)
 -   [API](#api)
 -   [License](#license)
 
@@ -33,6 +34,16 @@ replace(join(values(o), ' '), 'Hello', 'Hey');
 ```
 
 Functions in Bundstreg try to be as forgiving as possible and won't blow up in your face as long as you pass them correctly typed data. You should also keep in mind that all methods which let you invoke an iteratee on the elements of an array will loop over the original array so take care not to change the size of the array while iterating.
+
+## Benchmark
+
+Bundstreg includes a simple benchmark suite based on [Benchmark.js](https://benchmarkjs.com/) used for comparing the throughput of functions in Bundstreg against their [Lodash](https://lodash.com/) and native equivalents. The benchmarks can be run in Node.js:
+
+```console
+$ node -r babel-core/register bench[/<file>]
+```
+
+Bundstreg aims to provide functions that performance-wise are at least on par with their native equivalents and ideally faster. [V8](https://github.com/v8/v8) is used as the implementation reference and functions in Bundstreg are when possible smarter versions of the native functions found there.
 
 ## API
 
