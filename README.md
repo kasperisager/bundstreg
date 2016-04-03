@@ -42,8 +42,7 @@ Join a number of arrays to a single array.
 
 **Parameters**
 
--   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The first array to concatenate.
--   `rest` **...[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The rest of the arrays to concatenate.
+-   `arrays` **...[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The arrays to concatenate.
 
 **Examples**
 
