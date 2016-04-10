@@ -12,3 +12,7 @@ test('join() joins the elements of an array to a string using a separator', asyn
 test('join() returns an empty string if no array is given', async t => {
   t.is(join(), '');
 });
+
+test('join() treats undefined and null elements as empty strings', async t => {
+  t.is(join([null, 1, 2, undefined, 3]), ',1,2,,3');
+});
