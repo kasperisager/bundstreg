@@ -31,10 +31,10 @@
   },
   "devDependencies": {
     "ava": "^0.14.0",
-    "babel-cli": "^6.6.5",
-    "coveralls": "^2.11.8",
-    "lodash": "^4.7.0",
-    "nyc": "^6.1.1",
+    "babel-cli": "^6.7.5",
+    "coveralls": "^2.11.9",
+    "lodash": "^4.10.0",
+    "nyc": "^6.4.0",
     "parkbench": "^0.1.0",
     "xo": "^0.13.0"
   },
