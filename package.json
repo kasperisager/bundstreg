@@ -30,7 +30,7 @@
     "timsort": "^0.2.1"
   },
   "devDependencies": {
-    "ava": "^0.13.0",
+    "ava": "^0.14.0",
     "babel-cli": "^6.6.5",
     "coveralls": "^2.11.8",
     "lodash": "^4.7.0",
@@ -39,7 +39,6 @@
     "xo": "^0.13.0"
   },
   "ava": {
-    "verbose": true,
     "require": [
       "babel-core/register"
     ]

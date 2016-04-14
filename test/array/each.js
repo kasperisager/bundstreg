@@ -8,8 +8,8 @@ test('each() iterates over an array', async t => {
   t.plan(7);
 
   t.is(each(a, (e, i) => {
-    t.ok(i === c++);
-    t.ok(e === a[i]);
+    t.truthy(i === c++);
+    t.truthy(e === a[i]);
   }), undefined);
 });
 

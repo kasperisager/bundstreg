@@ -5,9 +5,9 @@ test('keys() returns the keys of an object', async t => {
   const o = {foo: 1, bar: 2, baz: 3};
   const k = keys(o);
 
-  t.same(k, ['foo', 'bar', 'baz']);
+  t.deepEqual(k, ['foo', 'bar', 'baz']);
 });
 
 test('keys() returns an empty array if no object is given', async t => {
-  t.same(keys(), []);
+  t.deepEqual(keys(), []);
 });

@@ -16,13 +16,13 @@ function fixtures(d, type) {
 
 test('sort() sorts an array of numbers', async t => {
   for (const a of fixtures(100, Number)) {
-    t.same(sort(a), a.sort((a, b) => a - b));
+    t.deepEqual(sort(a), a.sort((a, b) => a - b));
   }
 });
 
 test('sort() sorts an array of strings', async t => {
   for (const a of fixtures(100, String)) {
-    t.same(sort(a), a.sort());
+    t.deepEqual(sort(a), a.sort());
   }
 });
 
@@ -32,10 +32,10 @@ test('sort() allows specifying a custom comparator', async t => {
   }
 
   for (const a of fixtures(100, Number)) {
-    t.same(sort(a, compare), a.sort(compare));
+    t.deepEqual(sort(a, compare), a.sort(compare));
   }
 });
 
 test('sort() returns an empty array if no array is given', async t => {
-  t.same(sort(), []);
+  t.deepEqual(sort(), []);
 });
