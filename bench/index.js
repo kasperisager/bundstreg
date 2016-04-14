@@ -7,6 +7,7 @@ import './array/includes';
 import './array/join';
 import './array/map';
 import './array/reduce';
+import './array/reverse';
 import './array/some';
 import './array/sort';
 

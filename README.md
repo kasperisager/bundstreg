@@ -343,6 +343,27 @@ replace(s, 'Hello', 'Howdy');
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string with occurences of the pattern replaced by the replacement.
 
+### reverse
+
+Reverse the elements of an array.
+
+> **Note:** Unlike the native `Array#reverse()` reversing will happen on a copy of the array which therefore won't be
+> modified
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to reverse.
+
+**Examples**
+
+```javascript
+const a = [1, 2, 3, 4, 5];
+reverse(a);
+// => [5, 4, 3, 2, 1]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The reversed array.
+
 ### some
 
 Check if a predicate returns truthy for any element of an array.
