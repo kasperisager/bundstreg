@@ -364,6 +364,26 @@ reverse(a);
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The reversed array.
 
+### slice
+
+Create a shallow copy of a portion of an array.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to copy.
+-   `start` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The index at which to begin the copy. (optional, default `0`)
+-   `end` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The index at which to end the copy. (optional, default `array.length`)
+
+**Examples**
+
+```javascript
+const a = [1, 2, 3, 4];
+slice(a, 1, 3);
+// => [2, 3]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The copy of the array.
+
 ### some
 
 Check if a predicate returns truthy for any element of an array.
