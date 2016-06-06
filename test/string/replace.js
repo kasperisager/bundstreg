@@ -1,5 +1,5 @@
 import test from 'ava';
-import replace from '../../lib/string/replace';
+import {replace} from '../../lib/string/replace';
 
 test('replace() replaces occurences of a pattern in a string', async t => {
   const fixtures = [

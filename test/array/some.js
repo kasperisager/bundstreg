@@ -1,5 +1,5 @@
 import test from 'ava';
-import some from '../../lib/array/some';
+import {some} from '../../lib/array/some';
 
 test('some() checks whether any item of an array matches a predicate', async t => {
   const a = [1, 3];

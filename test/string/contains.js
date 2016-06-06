@@ -1,5 +1,5 @@
 import test from 'ava';
-import contains from '../../lib/string/contains';
+import {contains} from '../../lib/string/contains';
 
 test('contains() checks if a string contains a query string', async t => {
   const fixtures = [

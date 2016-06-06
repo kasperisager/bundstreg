@@ -1,5 +1,5 @@
 import test from 'ava';
-import sort from '../../lib/array/sort';
+import {sort} from '../../lib/array/sort';
 import {random, sorted, reversed} from '../helpers/generate-array';
 
 function fixtures(d, type) {

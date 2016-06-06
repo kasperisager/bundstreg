@@ -1,5 +1,5 @@
 import test from 'ava';
-import startsWith from '../../lib/string/starts-with';
+import {startsWith} from '../../lib/string/starts-with';
 
 test('startsWith() checks if a string starts with a given query string', async t => {
   const fixtures = [

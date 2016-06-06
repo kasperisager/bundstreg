@@ -1,5 +1,5 @@
 import test from 'ava';
-import filter from '../../lib/array/filter';
+import {filter} from '../../lib/array/filter';
 
 test('filter() filters items of an array by predicate', async t => {
   const a = [1, 2, 3, 4];

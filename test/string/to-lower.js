@@ -1,5 +1,5 @@
 import test from 'ava';
-import toLower from '../../lib/string/to-lower';
+import {toLower} from '../../lib/string/to-lower';
 
 test('toLower() lowercases a string', async t => {
   const fixtures = [

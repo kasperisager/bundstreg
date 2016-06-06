@@ -1,5 +1,5 @@
 import test from 'ava';
-import is from '../../lib/value/is';
+import {is} from '../../lib/value/is';
 
 test('is() checks if two values are the same', async t => {
   const fixtures = [

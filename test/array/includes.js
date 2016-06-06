@@ -1,5 +1,5 @@
 import test from 'ava';
-import includes from '../../lib/array/includes';
+import {includes} from '../../lib/array/includes';
 
 test('includes() checks if an array includes a specific element', async t => {
   const a = [1, 2, 3];

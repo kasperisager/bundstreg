@@ -1,5 +1,5 @@
 import test from 'ava';
-import reverse from '../../lib/array/reverse';
+import {reverse} from '../../lib/array/reverse';
 
 test('reverse() reverses the elements of an array', async t => {
   const fixtures = [

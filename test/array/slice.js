@@ -1,5 +1,5 @@
 import test from 'ava';
-import slice from '../../lib/array/slice';
+import {slice} from '../../lib/array/slice';
 
 test('slice() creates a copy of an array', async t => {
   const a = [1, 2, 3, 4];

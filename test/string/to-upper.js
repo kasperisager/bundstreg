@@ -1,5 +1,5 @@
 import test from 'ava';
-import toUpper from '../../lib/string/to-upper';
+import {toUpper} from '../../lib/string/to-upper';
 
 test('toUpper() uppercases a string', async t => {
   const fixtures = [

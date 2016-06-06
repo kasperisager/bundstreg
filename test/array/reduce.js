@@ -1,5 +1,5 @@
 import test from 'ava';
-import reduce from '../../lib/array/reduce';
+import {reduce} from '../../lib/array/reduce';
 
 test('reduce() folds over an array', async t => {
   const a = [1, 2, 3, 4];

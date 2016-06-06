@@ -1,5 +1,5 @@
 import test from 'ava';
-import trim from '../../lib/string/trim';
+import {trim} from '../../lib/string/trim';
 
 test('trim() trims trailing whitespace from a string', async t => {
   const fixtures = [

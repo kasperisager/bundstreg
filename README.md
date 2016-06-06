@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/kasperisager/bundstreg.svg?branch=master)](https://travis-ci.org/kasperisager/bundstreg) [![Coverage Status](https://coveralls.io/repos/github/kasperisager/bundstreg/badge.svg?branch=master)](https://coveralls.io/github/kasperisager/bundstreg?branch=master) [![Inline docs](http://inch-ci.org/github/kasperisager/bundstreg.svg?branch=master)](http://inch-ci.org/github/kasperisager/bundstreg)
 
-Bundstreg is a set of utility functions designed to replace many native JavaScript methods with often faster alternatives in the same vein as [Underscore](http://underscorejs.org/), [Lodash](https://lodash.com/), and the likes. The thing that Bundstreg does differently from these libraries is its focus on minimalism and speed.
+Bundstreg is a set of utility functions designed to replace many native JavaScript methods with often faster alternatives in the same vein as [Underscore](http://underscorejs.org/), [Lodash](https://lodash.com/), and the likes. The thing that Bundstreg does differently from these libraries is its focus on minimalism and speed as well as the fact that none of the functions ever mutate their input.
 
 ## Contents
 
@@ -62,26 +62,6 @@ concat([1, 2], [3, 4], [5, 6]);
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The concatenated array.
 
-### contains
-
-Check if a string contains a specific substring.
-
-**Parameters**
-
--   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to check.
--   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
--   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The position at which to start looking.
-
-**Examples**
-
-```javascript
-const s = 'Hello World';
-contains(s, 'orl');
-// => true
-```
-
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the string contains the substring, otherwise `false`.
-
 ### each
 
 Loop over an array and invoke an iteratee on each array element.
@@ -98,49 +78,9 @@ const a = [1, 2, 3];
 each(a, (e, i) => console.log(e, i));
 ```
 
-### endsWith
-
-Check if a string ends with a specific substring.
-
-**Parameters**
-
--   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to check.
--   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
--   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The position at which to stop looking. (optional, default `string.length`)
-
-**Examples**
-
-```javascript
-const s = 'Hello World';
-endsWith(s, 'rld');
-// => true
-```
-
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the string ends with the substring, otherwise `false`.
-
-### entries
-
-Get the entries of an object as an array of `[key, value]` pairs.
-
-**Parameters**
-
--   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object whose entries to get.
-
-**Examples**
-
-```javascript
-const o = {foo: 1, bar: 2};
-entries(o);
-// => [['foo', 1], ['bar', 2]]
-```
-
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The entries of the object.
-
 ### every
 
 Check if a predicate returns truthy for all elements of an array.
-
-> **Note:** Iteration stops as soon as an element is found for which the predicate returns falsy.
 
 **Parameters**
 
@@ -203,7 +143,7 @@ Check if an array includes a specific element.
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to check.
 -   `query` **Any** The element to check for.
--   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The position at which to start looking. (optional, default `0`)
+-   `position` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The position at which to start looking. (optional, default `0`)
 
 **Examples**
 
@@ -215,35 +155,6 @@ includes(a, 2);
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the array includes the element, otherwise `false`.
 
-### is
-
-Check if two values are the same. This is neither the same as the `==` operator nor the `===` operator as `is()`
-treats `+0` and `-0` as being not equal and `NaN` as being equal to itself.
-
-**Parameters**
-
--   `x` **Any** The first value.
--   `y` **Any** The second value.
-
-**Examples**
-
-```javascript
-// These are all true:
-is(173, 173);
-is('foo', 'foo');
-is(0, 0);
-is(NaN, NaN);
-is(null, null);
-
-// These are all false:
-is('foo', 'bar');
-is(0, -0);
-is({}, {});
-is([], []);
-```
-
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the values are the same, otherwise `false`.
-
 ### join
 
 Join the elements of an array to a string using a separator.
@@ -251,7 +162,7 @@ Join the elements of an array to a string using a separator.
 **Parameters**
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array whose elements to join.
--   `separator` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)=** The separator to use for joining the elements. (optional, default `','`)
+-   `separator` **\[[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)]** The separator to use for joining the elements. (optional, default `','`)
 
 **Examples**
 
@@ -262,24 +173,6 @@ join(a, ' + ');
 ```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The resulting string.
-
-### keys
-
-Get the keys of an object as an array.
-
-**Parameters**
-
--   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object whose keys to get.
-
-**Examples**
-
-```javascript
-const o = {foo: 1, bar: 2};
-keys(o);
-// => ['foo', 'bar']
-```
-
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The keys of the object.
 
 ### map
 
@@ -308,7 +201,7 @@ Reduce an array to a value accumulated by invoking an iteratee on each element o
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to reduce.
 -   `iteratee` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** The iteratee to invoke of each element.
--   `accumulator` **Any=** The initial value. (optional, default `array[0]`)
+-   `accumulator` **\[Any]** The initial value. (optional, default `array[0]`)
 
 **Examples**
 
@@ -320,35 +213,9 @@ reduce(a, (s, n) => s + n);
 
 Returns **Any** The accumulated value.
 
-### replace
-
-Replace occurences of a pattern in a string with a replacement.
-
-> **Note:** If a string is used as pattern then only the first occurence of the string will be replaced. To perform a
-> global replacement use a regular expression with the `g` flag.
-
-**Parameters**
-
--   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to perform the replacement in.
--   `pattern` **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)\|[RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp))** The pattern to replace.
--   `replacement` **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)\|[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function))** The replacement for the pattern.
-
-**Examples**
-
-```javascript
-const s = 'Hello World';
-replace(s, 'Hello', 'Howdy');
-// => 'Howdy World'
-```
-
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string with occurences of the pattern replaced by the replacement.
-
 ### reverse
 
 Reverse the elements of an array.
-
-> **Note:** Unlike the native `Array#reverse()` reversing will happen on a copy of the array which therefore won't be
-> modified
 
 **Parameters**
 
@@ -371,8 +238,8 @@ Create a shallow copy of a portion of an array.
 **Parameters**
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to copy.
--   `start` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The index at which to begin the copy. (optional, default `0`)
--   `end` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The index at which to end the copy. (optional, default `array.length`)
+-   `start` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The index at which to begin the copy. (optional, default `0`)
+-   `end` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The index at which to end the copy. (optional, default `array.length`)
 
 **Examples**
 
@@ -387,8 +254,6 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ### some
 
 Check if a predicate returns truthy for any element of an array.
-
-> **Note:** Iteration stops as soon as an element is found for which the predicate returns truthy.
 
 **Parameters**
 
@@ -409,13 +274,10 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 Sort the elements of an array.
 
-> **Note:** Unlike the native `Array#sort()` sorting will happen on a copy of the array which therefore won't be
-> modified.
-
 **Parameters**
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to sort.
--   `comparator` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)=** The comparator function to use.
+-   `comparator` **\[[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)]** The comparator function to use.
 
 **Examples**
 
@@ -427,6 +289,123 @@ sort(a);
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The sorted array.
 
+### entries
+
+Get the entries of an object as an array of `[key, value]` pairs.
+
+**Parameters**
+
+-   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object whose entries to get.
+
+**Examples**
+
+```javascript
+const o = {foo: 1, bar: 2};
+entries(o);
+// => [['foo', 1], ['bar', 2]]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The entries of the object.
+
+### keys
+
+Get the keys of an object as an array.
+
+**Parameters**
+
+-   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object whose keys to get.
+
+**Examples**
+
+```javascript
+const o = {foo: 1, bar: 2};
+keys(o);
+// => ['foo', 'bar']
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The keys of the object.
+
+### values
+
+Get the values of an object as an array.
+
+**Parameters**
+
+-   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object whose values to get.
+
+**Examples**
+
+```javascript
+const o = {foo: 1, bar: 2};
+keys(o);
+// => [1, 2]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The values of the object.
+
+### contains
+
+Check if a string contains a specific substring.
+
+**Parameters**
+
+-   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to check.
+-   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
+-   `position` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The position at which to start looking.
+
+**Examples**
+
+```javascript
+const s = 'Hello World';
+contains(s, 'orl');
+// => true
+```
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the string contains the substring, otherwise `false`.
+
+### endsWith
+
+Check if a string ends with a specific substring.
+
+**Parameters**
+
+-   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to check.
+-   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
+-   `position` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The position at which to stop looking. (optional, default `string.length`)
+
+**Examples**
+
+```javascript
+const s = 'Hello World';
+endsWith(s, 'rld');
+// => true
+```
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the string ends with the substring, otherwise `false`.
+
+### replace
+
+Replace occurences of a pattern in a string with a replacement.
+
+> **Note:** If a string is used as pattern then only the first occurence of the string will be replaced. To perform a
+> global replacement use a regular expression with the `g` flag.
+
+**Parameters**
+
+-   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to perform the replacement in.
+-   `pattern` **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp))** The pattern to replace.
+-   `replacement` **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function))** The replacement for the pattern.
+
+**Examples**
+
+```javascript
+const s = 'Hello World';
+replace(s, 'Hello', 'Howdy');
+// => 'Howdy World'
+```
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string with occurences of the pattern replaced by the replacement.
+
 ### split
 
 Split a string into an array of substrings.
@@ -437,8 +416,8 @@ Split a string into an array of substrings.
 **Parameters**
 
 -   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to split.
--   `separator` **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)\|[RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp))=** The separator to use for splitting the string.
--   `limit` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The number of splits to be made.
+-   `separator` **\[([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp))]** The separator to use for splitting the string.
+-   `limit` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The number of splits to be made.
 
 **Examples**
 
@@ -448,7 +427,7 @@ split(s, ' ');
 // => ['Hello', 'World']
 ```
 
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** The array of substrings.
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** The array of substrings.
 
 ### startsWith
 
@@ -458,7 +437,7 @@ Check if a string starts with a specific substring.
 
 -   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to check.
 -   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
--   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)=** The position at which to start looking. (optional, default `0`)
+-   `position` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The position at which to start looking. (optional, default `0`)
 
 **Examples**
 
@@ -524,23 +503,34 @@ trim(s);
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The trimmed string.
 
-### values
+### is
 
-Get the values of an object as an array.
+Check if two values are the same. This is neither the same as the `==` operator nor the `===` operator as `is()`
+treats `+0` and `-0` as being not equal and `NaN` as being equal to itself.
 
 **Parameters**
 
--   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object whose values to get.
+-   `x` **Any** The first value.
+-   `y` **Any** The second value.
 
 **Examples**
 
 ```javascript
-const o = {foo: 1, bar: 2};
-keys(o);
-// => [1, 2]
+// These are all true:
+is(173, 173);
+is('foo', 'foo');
+is(0, 0);
+is(NaN, NaN);
+is(null, null);
+
+// These are all false:
+is('foo', 'bar');
+is(0, -0);
+is({}, {});
+is([], []);
 ```
 
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The values of the object.
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the values are the same, otherwise `false`.
 
 ## License
 

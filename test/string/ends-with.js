@@ -1,5 +1,5 @@
 import test from 'ava';
-import endsWith from '../../lib/string/ends-with';
+import {endsWith} from '../../lib/string/ends-with';
 
 test('endsWith() checks if a string ends with a given query string', async t => {
   const fixtures = [

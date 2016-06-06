@@ -1,5 +1,5 @@
 import test from 'ava';
-import every from '../../lib/array/every';
+import {every} from '../../lib/array/every';
 
 test('every() checks whether all items of an array match a predicate', async t => {
   const a = [1, 3];

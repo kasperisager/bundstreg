@@ -1,5 +1,5 @@
 import test from 'ava';
-import concat from '../../lib/array/concat';
+import {concat} from '../../lib/array/concat';
 
 test('concat() concatenates two or more arrays', async t => {
   const a = [1, 2, 3];

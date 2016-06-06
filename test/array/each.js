@@ -1,5 +1,5 @@
 import test from 'ava';
-import each from '../../lib/array/each';
+import {each} from '../../lib/array/each';
 
 test('each() iterates over an array', async t => {
   const a = ['foo', 'bar', 'baz'];

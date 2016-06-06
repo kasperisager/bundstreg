@@ -1,5 +1,5 @@
 import test from 'ava';
-import map from '../../lib/array/map';
+import {map} from '../../lib/array/map';
 
 test('map() maps over an array', async t => {
   const a = [1, 2, 3];
