@@ -1,6 +1,6 @@
 import bench from 'parkbench';
 import _ from 'lodash';
-import contains from '../../lib/string/contains';
+import {contains} from '../../lib/string/contains';
 
 const str = 'Lorem ipsum dolor sit amet consectetur adipiscing elit';
 

@@ -1,6 +1,6 @@
 import bench from 'parkbench';
 import _ from 'lodash';
-import toLower from '../../lib/string/to-lower';
+import {toLower} from '../../lib/string/to-lower';
 
 const str = 'Lorem ipsum dolor sit amet consectetur adipiscing elit';
 

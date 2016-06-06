@@ -1,6 +1,6 @@
 import bench from 'parkbench';
 import _ from 'lodash';
-import is from '../../lib/value/is';
+import {is} from '../../lib/value/is';
 
 bench()
   .add('is()', () => {

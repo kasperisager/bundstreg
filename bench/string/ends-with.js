@@ -1,6 +1,6 @@
 import bench from 'parkbench';
 import _ from 'lodash';
-import endsWith from '../../lib/string/ends-with';
+import {endsWith} from '../../lib/string/ends-with';
 
 const str = 'Lorem ipsum dolor sit amet consectetur adipiscing elit';
 

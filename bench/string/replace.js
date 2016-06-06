@@ -1,6 +1,6 @@
 import bench from 'parkbench';
 import _ from 'lodash';
-import replace from '../../lib/string/replace';
+import {replace} from '../../lib/string/replace';
 
 const str = 'Lorem ipsum dolor sit amet consectetur adipiscing elit';
 

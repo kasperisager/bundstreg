@@ -1,6 +1,6 @@
 import bench from 'parkbench';
 import _ from 'lodash';
-import sort from '../../lib/array/sort';
+import {sort} from '../../lib/array/sort';
 import {random, sorted, reversed} from '../../test/helpers/generate-array';
 import names from '../fixtures/names.json';
 

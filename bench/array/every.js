@@ -1,6 +1,6 @@
 import bench from 'parkbench';
 import _ from 'lodash';
-import every from '../../lib/array/every';
+import {every} from '../../lib/array/every';
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

@@ -1,6 +1,6 @@
 import bench from 'parkbench';
 import _ from 'lodash';
-import trim from '../../lib/string/trim';
+import {trim} from '../../lib/string/trim';
 
 const str = '        Lorem ipsum dolor sit amet consectetur adipiscing elit               ';
 

@@ -1,6 +1,6 @@
 import bench from 'parkbench';
 import _ from 'lodash';
-import find from '../../lib/array/find';
+import {find} from '../../lib/array/find';
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
