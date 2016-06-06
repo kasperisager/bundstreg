@@ -97,6 +97,27 @@ every(a, (e, i) => e % 2 === 0);
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** `true` if the predicate returns truthy for all elements of the array, otherwise `false`.
 
+### fill
+
+Fill a portion of an array with a value.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to fill.
+-   `value` **Any** The value to fill the array with.
+-   `start` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The index at which to start filling in values. (optional, default `0`)
+-   `end` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The index at which to end filling in values. (optional, default `array.length`)
+
+**Examples**
+
+```javascript
+const a = [1, 2, 3, 4];
+fill(a, 'foo', 1, 3);
+// => [1, 'foo', 'foo', 4]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array with the value filled in.
+
 ### filter
 
 Filter an array by only keeping elements for which a predicate returns truthy.
