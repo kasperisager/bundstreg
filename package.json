@@ -30,15 +30,16 @@
     "timsort": "^0.2.1"
   },
   "devDependencies": {
-    "ava": "^0.14.0",
-    "babel-cli": "^6.7.5",
+    "ava": "^0.15.2",
+    "babel-cli": "^6.9.0",
     "coveralls": "^2.11.9",
-    "lodash": "^4.10.0",
-    "nyc": "^6.4.0",
+    "lodash": "^4.13.1",
+    "nyc": "^6.4.4",
     "parkbench": "^0.1.0",
-    "xo": "^0.13.0"
+    "xo": "^0.15.1"
   },
   "ava": {
+    "concurrency": 4,
     "require": [
       "babel-core/register"
     ]
