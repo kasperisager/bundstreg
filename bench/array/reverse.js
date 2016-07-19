@@ -9,9 +9,9 @@ bench()
     reverse(arr);
   })
   .add('_.reverse()', () => {
-    _.reverse(arr.slice());
+    _.reverse(arr);
   })
   .add('Array#reverse()', () => {
-    arr.slice().reverse();
+    arr.reverse();
   })
   .run();
