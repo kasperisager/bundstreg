@@ -25,6 +25,14 @@ test('includes() starts searching from the end of an array if given a negative p
   t.false(includes(a, 2, -1));
 });
 
+test('includes() ignores the position if a negative value smaller than size of the array is given', async t => {
+  const a = [1, 2, 3];
+
+  t.true(includes(a, 1, -4));
+  t.true(includes(a, 2, -4));
+  t.true(includes(a, 3, -4));
+});
+
 test('includes() can check if an array includes NaN', async t => {
   const a = [1, 2, 3];
   const b = [1, 2, NaN];
