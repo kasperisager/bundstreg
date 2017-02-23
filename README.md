@@ -233,6 +233,25 @@ map(a, (e, i) => e * 2);
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array of values returned from each invocation of the iteratee.
 
+### partition
+
+Partition an array into two arrays where the first contains elements for which the predicate returns truthy.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to partition.
+-   `predicate` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** The predicate to invoke on each element.
+
+**Examples**
+
+```javascript
+const a = [1, 2, 3, 4];
+partition(a, (e, i) => e % 2 === 0);
+// => [[2, 4], [1, 3]]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** An array containing the two paritions.
+
 ### reduce
 
 Reduce an array to a value accumulated by invoking an iteratee on each element of the array.
