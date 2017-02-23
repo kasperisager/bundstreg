@@ -329,6 +329,25 @@ sort(a);
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The sorted array.
 
+### assign
+
+Copy the key/values pairs of one or more source objects to a target object.
+
+**Parameters**
+
+-   `target` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The object to copy to.
+-   `sources` **...[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The objects to copy from.
+
+**Examples**
+
+```javascript
+const o = {foo: 1};
+assign(o, {bar: 2});
+// => {foo: 1, bar: 2}
+```
+
+Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The target object.
+
 ### entries
 
 Get the entries of an object as an array of `[key, value]` pairs.
