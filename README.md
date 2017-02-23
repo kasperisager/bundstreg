@@ -156,6 +156,25 @@ find(a, (e, i) => e % 2 === 0);
 
 Returns **Any** The first element for which the predicate returns truthy, or `undefined`.
 
+### flatMap
+
+Create an array of flattened values returned from invocations of an iteratee on each element of an array.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to map over.
+-   `iteratee` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** The iteratee to invoke on each element.
+
+**Examples**
+
+```javascript
+const a = [1, 2, 3];
+flatMap(a, (e, i) => [e, e]);
+// => [1, 1, 2, 2, 3, 3]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array of flattened values returned from each invocation of the iteratee.
+
 ### includes
 
 Check if an array includes a specific element.
