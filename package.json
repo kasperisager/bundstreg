@@ -26,9 +26,6 @@
     "modern",
     "browser"
   ],
-  "dependencies": {
-    "timsort": "^0.2.1"
-  },
   "devDependencies": {
     "ava": "^0.15.2",
     "babel-cli": "^6.10.1",
