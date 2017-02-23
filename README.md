@@ -156,6 +156,23 @@ find(a, (e, i) => e % 2 === 0);
 
 Returns **Any** The first element for which the predicate returns truthy, or `undefined`.
 
+### flatten
+
+Flatten an array of arrays.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to flatten.
+
+**Examples**
+
+```javascript
+flatten([[1, 2], [3, 4], [5, 6]]);
+// => [1, 2, 3, 4, 5, 6]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The flattened array.
+
 ### flatMap
 
 Create an array of flattened values returned from invocations of an iteratee on each element of an array.
