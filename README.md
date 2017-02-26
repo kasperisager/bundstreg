@@ -22,7 +22,7 @@ $ npm install --save bundstreg
 
 ## Usage
 
-[<img src=https://tonicdev.com/favicon.ico width=25 align=top> __Try out Bundstreg in your browser__](https://tonicdev.com/npm/bundstreg)
+[<img src="https://www.npmjs.com/static/images/runkit.svg" width=24 align=top> __Try out Bundstreg in your browser__](https://runkit.com/npm/bundstreg)
 
 ```js
 import {values, join, replace} from 'bundstreg';
