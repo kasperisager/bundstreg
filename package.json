@@ -1,6 +1,6 @@
 {
   "name": "bundstreg",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Functional alternatives to many native JavaScript methods and then some",
   "license": "MIT",
   "repository": "kasperisager/bundstreg",
