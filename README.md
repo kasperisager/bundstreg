@@ -104,9 +104,9 @@ Fill a portion of an array with a value.
 **Parameters**
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to fill.
--   `value` **Any** The value to fill the array with.
--   `start` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The index at which to start filling in values. (optional, default `0`)
--   `end` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The index at which to end filling in values. (optional, default `array.length`)
+-   `value` **any** The value to fill the array with.
+-   `start` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** The index at which to start filling in values. (optional, default `0`)
+-   `end` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** The index at which to end filling in values. (optional, default `array.length`)
 
 **Examples**
 
@@ -137,6 +137,25 @@ filter(a, (e, i) => e % 2 === 0);
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The filtered array.
 
+### findIndex
+
+Find the index of the first element of an array for which a predicate returns truthy.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to look for an element in.
+-   `predicate` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** The predicate to invoke on each element.
+
+**Examples**
+
+```javascript
+const a = [1, 2, 3];
+find(a, (e, i) => e % 2 === 0);
+// => 1
+```
+
+Returns **any** The index of the first element for which the predicate returns truthy, or `-1`.
+
 ### find
 
 Find the first element of an array for which a predicate returns truthy.
@@ -154,24 +173,7 @@ find(a, (e, i) => e % 2 === 0);
 // => 2
 ```
 
-Returns **Any** The first element for which the predicate returns truthy, or `undefined`.
-
-### flatten
-
-Flatten an array of arrays.
-
-**Parameters**
-
--   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to flatten.
-
-**Examples**
-
-```javascript
-flatten([[1, 2], [3, 4], [5, 6]]);
-// => [1, 2, 3, 4, 5, 6]
-```
-
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The flattened array.
+Returns **any** The first element for which the predicate returns truthy, or `undefined`.
 
 ### flatMap
 
@@ -192,6 +194,23 @@ flatMap(a, (e, i) => [e, e]);
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array of flattened values returned from each invocation of the iteratee.
 
+### flatten
+
+Flatten an array of arrays.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to flatten.
+
+**Examples**
+
+```javascript
+flatten([[1, 2], [3, 4], [5, 6]]);
+// => [1, 2, 3, 4, 5, 6]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The flattened array.
+
 ### includes
 
 Check if an array includes a specific element.
@@ -199,8 +218,8 @@ Check if an array includes a specific element.
 **Parameters**
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to check.
--   `query` **Any** The element to check for.
--   `position` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The position at which to start looking. (optional, default `0`)
+-   `query` **any** The element to check for.
+-   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** The position at which to start looking. (optional, default `0`)
 
 **Examples**
 
@@ -219,7 +238,7 @@ Join the elements of an array to a string using a separator.
 **Parameters**
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array whose elements to join.
--   `separator` **\[[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)]** The separator to use for joining the elements. (optional, default `','`)
+-   `separator` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** The separator to use for joining the elements. (optional, default `','`)
 
 **Examples**
 
@@ -277,7 +296,7 @@ Reduce an array to a value accumulated by invoking an iteratee on each element o
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to reduce.
 -   `iteratee` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** The iteratee to invoke of each element.
--   `accumulator` **\[Any]** The initial value. (optional, default `array[0]`)
+-   `accumulator` **any?** The initial value. (optional, default `array[0]`)
 
 **Examples**
 
@@ -287,7 +306,7 @@ reduce(a, (s, n) => s + n);
 // => 6
 ```
 
-Returns **Any** The accumulated value.
+Returns **any** The accumulated value.
 
 ### reverse
 
@@ -314,8 +333,8 @@ Create a shallow copy of a portion of an array.
 **Parameters**
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to copy.
--   `start` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The index at which to begin the copy. (optional, default `0`)
--   `end` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The index at which to end the copy. (optional, default `array.length`)
+-   `start` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** The index at which to begin the copy. (optional, default `0`)
+-   `end` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** The index at which to end the copy. (optional, default `array.length`)
 
 **Examples**
 
@@ -353,7 +372,7 @@ Sort the elements of an array.
 **Parameters**
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The array to sort.
--   `comparator` **\[[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)]** The comparator function to use.
+-   `comparator` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)?** The comparator function to use.
 
 **Examples**
 
@@ -446,7 +465,7 @@ Check if a string contains a specific substring.
 
 -   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to check.
 -   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
--   `position` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The position at which to start looking.
+-   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** The position at which to start looking.
 
 **Examples**
 
@@ -466,7 +485,7 @@ Check if a string ends with a specific substring.
 
 -   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to check.
 -   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
--   `position` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The position at which to stop looking. (optional, default `string.length`)
+-   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** The position at which to stop looking. (optional, default `string.length`)
 
 **Examples**
 
@@ -511,8 +530,8 @@ Split a string into an array of substrings.
 **Parameters**
 
 -   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to split.
--   `separator` **\[([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp))]** The separator to use for splitting the string.
--   `limit` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The number of splits to be made.
+-   `separator` **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp))?** The separator to use for splitting the string.
+-   `limit` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** The number of splits to be made.
 
 **Examples**
 
@@ -532,7 +551,7 @@ Check if a string starts with a specific substring.
 
 -   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string to check.
 -   `query` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The substring to check for.
--   `position` **\[[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)]** The position at which to start looking. (optional, default `0`)
+-   `position` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** The position at which to start looking. (optional, default `0`)
 
 **Examples**
 
@@ -605,8 +624,8 @@ treats `+0` and `-0` as being not equal and `NaN` as being equal to itself.
 
 **Parameters**
 
--   `x` **Any** The first value.
--   `y` **Any** The second value.
+-   `x` **any** The first value.
+-   `y` **any** The second value.
 
 **Examples**
 
