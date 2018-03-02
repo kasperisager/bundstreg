@@ -15,3 +15,15 @@ bench()
     str.endsWith('elit');
   })
   .run();
+
+bench()
+  .add('endsWith()', () => {
+    endsWith(str, 'nlit');
+  })
+  .add('_.endsWith()', () => {
+    _.endsWith(str, 'nlit');
+  })
+  .add('String#endsWith()', () => {
+    str.endsWith('nlit');
+  })
+  .run();
