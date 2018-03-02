@@ -15,3 +15,15 @@ bench()
     str.startsWith('Lorem');
   })
   .run();
+
+bench()
+  .add('startsWith()', () => {
+    startsWith(str, 'Forem');
+  })
+  .add('_.startsWith()', () => {
+    _.startsWith(str, 'Forem');
+  })
+  .add('String#startsWith()', () => {
+    str.startsWith('Forem');
+  })
+  .run();
