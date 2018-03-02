@@ -1,12 +1,13 @@
 import bench from 'parkbench';
 import _ from 'lodash';
 import {sort} from '../../lib/array/sort';
-import {random, sorted, reversed} from '../../test/helpers/generate-array';
-import names from '../fixtures/names.json';
+import {random, sorted, reversed, same} from '../../test/helpers/generate-array';
+import names from '../fixtures/names';
 
 const arr1 = random(100, Number);
 const arr2 = sorted(100, Number);
 const arr3 = reversed(100, Number);
+const arr4 = same(100, Number);
 
 bench()
   .add('sort()', () => {
@@ -41,6 +42,18 @@ bench()
   })
   .add('Array#sort()', () => {
     arr3.slice().sort();
+  })
+  .run();
+
+bench()
+  .add('sort()', () => {
+    sort(arr4);
+  })
+  .add('_.sortBy()', () => {
+    _.sortBy(arr4);
+  })
+  .add('Array#sort()', () => {
+    arr4.slice().sort();
   })
   .run();
 
